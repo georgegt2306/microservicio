@@ -79,7 +79,7 @@ public class PersonalInformationController {
 	    	PersonalInformation obj = service.findById(id);
 
 	        if(obj == null){
-	            throw new NewModelNotFoundException("ID  FOUND " + id);
+	            throw new NewModelNotFoundException("ID NOT FOUND " + id);
 	        }
 	        service.delete(id);
 	        return new ResponseEntity<>(NO_CONTENT);
