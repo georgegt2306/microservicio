@@ -1,0 +1,25 @@
+# Configuración de Spring Boot
+server:
+  port: 8081
+  servlet:
+    context-path: /api/v1
+
+# Configuración del origen de datos
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1434;databaseName=DATOS_PERSONALES;autoReconnect=true
+    username: sa
+    password: Admin_1234
+    testWhileIdle: true
+    validationQuery: SELECT 1
+
+# Configuración de JPA (Java Persistence API)
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate.dialect: org.hibernate.dialect.SQLServer2008Dialect
+      jakarta.persistence.sharedCache.mode: ALL
+    open-in-view: false

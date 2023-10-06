@@ -1,0 +1,2 @@
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Admin_1234" -p 1434:1433 --name MiSqlServer -d mcr.microsoft.com/mssql/server:2019-latest
+create database DATOS_PERSONALES
